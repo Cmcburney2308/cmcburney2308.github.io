@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tours — Casey R Kane</title>
+  <link rel="icon" href="assets/img/475784617-122180895932252610-40630698574932899-n.jpg-2000x1999.jpeg" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <div class="brand-mark" aria-hidden="true">CRK</div>
+        <div>
+          <div style="font-weight:800">Casey R Kane</div>
+          <small>Official site</small>
+        </div>
+      </a>
+
+      <button class="btn nav-toggle" type="button" data-nav-toggle aria-controls="navpanel" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+
+      <div class="navpanel" id="navpanel" data-navpanel data-nav>
+        <nav class="navlinks" aria-label="Primary">
+          <a data-nav-link href="index.html#music">Music</a>
+          <a data-nav-link href="details.html">Tours</a>
+          <a data-nav-link href="shop.html">Shop</a>
+          <a data-nav-link href="index.html#qa">Q&A</a>
+          <a data-nav-link href="index.html#contact">Contact</a>
+          <span class="theme-toggle">
+            <button class="btn" type="button" data-theme-toggle aria-pressed="false">
+              <span data-theme-icon aria-hidden="true">☾</span>
+              <span data-theme-label>Dark</span>
+              <span class="kbd">T</span>
+            </button>
+          </span>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 style="margin: 0 0 10px">Tours</h1>
+      <p class="note" style="margin:0 0 18px">Filter dates, then ride the photo loop — the tag updates to match what’s on screen.</p>
+
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <div class="cardx">
+            <div class="kicker">Next show</div>
+            <p style="margin:.55rem 0 0">City / venue: <strong data-next-show>—</strong></p>
+            <p style="margin:.55rem 0 0">Countdown: <strong data-countdown>—</strong></p>
+          </div>
+
+          <div class="cardx" style="margin-top:14px">
+            <h2 style="margin:0 0 8px">Filter</h2>
+            <label for="region" class="kicker" style="display:block; margin-bottom:8px">Region</label>
+            <select id="region" data-tour-filter class="btn" style="width:100%; justify-content:space-between">
+              <option>All</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="cardx" aria-label="Tour photos">
+          <div class="photo-marquee" aria-label="Scrolling photo montage">
+            <div class="photo-track" data-photo-track></div>
+          </div>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
+            <span class="quip" data-photo-quip data-bop="0"><span aria-hidden="true">✦</span><span>Behind the sound</span></span>
+            <span class="note">Hover to pause • Press <span class="kbd">T</span> for light mode</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Dates</h2>
+      <div class="grid-3" data-tour-list></div>
+      <p class="note" style="margin-top:14px">Want VIP / meet & greet? grab a pass in the <a href="shop.html">shop</a>.</p>
+    </div>
+  </section>
+
+  <section class="footer">
+  <div class="container">
+    <small>
+      © <span data-year></span> Casey R Kane • McB Create • Official site • movement era.
+    </small>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+  // keyboard shortcut for theme
+  document.addEventListener('keydown', (e) => {
+    if (e.key && e.key.toLowerCase() === 't' && !e.metaKey && !e.ctrlKey && !e.altKey){
+      document.querySelector('[data-theme-toggle]')?.click();
+    }
+  });
+</script>
+</main>
+
+<script src="assets/site.js"></script>
+<script src="assets/tours.js"></script>
+</body>
+</html>
