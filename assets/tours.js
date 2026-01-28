@@ -70,7 +70,7 @@ const photoQuips = [
   function updateCountdown(){
     const next = tours.find(t => t.ts > Date.now());
     if (!countdownEl) return;
-    if (!next) { countdownEl.textContent = '—'; return; }
+    if (!next) { countdownEl.textContent = '-'; return; }
 
     const diff = Math.max(0, next.ts - Date.now());
     const totalSeconds = Math.floor(diff / 1000);
