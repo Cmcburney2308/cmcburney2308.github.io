@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tours - Casey R Kane</title>
+  <link rel="icon" href="assets/img/475784617-122180895932252610-40630698574932899-n.jpg-2000x1999.jpeg" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <div class="brand-mark" aria-hidden="true">🤍</div>
+        <div>
+          <div style="font-weight:800">Casey R Kane</div>
+          <small>Official site</small>
+        </div>
+      </a>
+
+      <button class="btn nav-toggle" type="button" data-nav-toggle aria-controls="navpanel" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+
+      <div class="navpanel" id="navpanel" data-navpanel data-nav>
+        <nav class="navlinks" aria-label="Primary">
+          <a data-nav-link href="index.html#music">Music</a>
+          <a data-nav-link href="details.html">Tours</a>
+          <a data-nav-link href="shop.html">Shop</a>
+          <a data-nav-link href="index.html#qa">Q&A</a>
+          <a data-nav-link href="index.html#contact">Contact</a>
+          <span class="theme-toggle">
+            <button class="btn" type="button" data-theme-toggle aria-pressed="false">
+              <span data-theme-icon aria-hidden="true">☾</span>
+              <span data-theme-label>Dark</span>
+              <span class="kbd">T</span>
+            </button>
+          </span>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1 style="margin: 0 0 10px">Movement Era Tour 2026</h1>
+      <p class="note" style="margin:0 0 18px">Join me on the road! Filter by region and grab your tickets before they sell out.</p>
+
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <div class="cardx">
+            <div class="kicker">Next show</div>
+            <p style="margin:.55rem 0 0">City / venue: <strong data-next-show>-</strong></p>
+            <p style="margin:.55rem 0 0">Countdown: <strong data-countdown>-</strong></p>
+            <div style="margin-top:12px">
+              <span class="view-badge">
+                <svg width="16" height="16" style="fill:currentColor">
+                  <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+                <span data-tour-views>1,247</span> people viewing
+              </span>
+            </div>
+          </div>
+
+          <div class="cardx" style="margin-top:14px">
+            <h2 style="margin:0 0 8px">Filter</h2>
+            <label for="region" class="kicker" style="display:block; margin-bottom:8px">Region</label>
+            <select id="region" data-tour-filter class="btn" style="width:100%; justify-content:space-between">
+              <option>All</option>
+            </select>
+          </div>
+          
+          <div class="cardx" style="margin-top:14px">
+            <div class="kicker">Tour stats</div>
+            <div style="margin-top:10px">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px">
+                <span class="note">Total shows</span>
+                <strong data-total-shows>5</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px">
+                <span class="note">Cities</span>
+                <strong data-total-cities>5</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between">
+                <span class="note">Tickets sold</span>
+                <strong data-tickets-sold>0</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardx" aria-label="Tour photos">
+          <div class="photo-marquee" aria-label="Scrolling photo montage">
+            <div class="photo-track" data-photo-track></div>
+          </div>
+          <div style="margin-top:12px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
+            <span class="quip" data-photo-quip data-bop="0"><span aria-hidden="true">✦</span><span>Behind the sound</span></span>
+            <span class="note">Hover to pause • Press <span class="kbd">T</span> for light mode</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px">
+        <h2 style="margin:0">Dates</h2>
+        <div style="display:flex; gap:8px; flex-wrap:wrap">
+          <button class="btn" data-view-mode="grid" style="opacity:1">Grid</button>
+          <button class="btn" data-view-mode="list" style="opacity:0.6">List</button>
+        </div>
+      </div>
+      <div class="grid-3" data-tour-list></div>
+      
+      <div class="cardx" style="margin-top:20px">
+        <div class="kicker">Want more?</div>
+        <h3 style="margin:.4rem 0">VIP Experience</h3>
+        <p class="note" style="margin:.5rem 0">Get exclusive meet & greet access, signed merch, and early entry to the venue.</p>
+        <a class="btn primary" href="shop.html" style="margin-top:10px">View VIP Packages</a>
+      </div>
+      
+      <div class="cardx" style="margin-top:14px">
+        <div class="kicker">Stay updated</div>
+        <h3 style="margin:.4rem 0">Tour Notifications</h3>
+        <p class="note" style="margin:.5rem 0">Get notified when new tour dates are announced in your area.</p>
+        <div style="display:flex; gap:10px; margin-top:10px; flex-wrap:wrap">
+          <input class="input" type="email" placeholder="your@email.com" data-tour-notify-email style="flex:1; min-width:200px" />
+          <button class="btn primary" data-tour-notify-submit>Notify Me</button>
+        </div>
+        <p class="note" style="margin-top:8px; font-size:.85rem" data-tour-notify-status></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>What to Expect</h2>
+      <div class="grid grid-3">
+        <div class="cardx">
+          <div style="font-size:2rem; margin-bottom:8px">🎤</div>
+          <h3 style="margin:.3rem 0; font-size:1.1rem">Live Performance</h3>
+          <p class="note" style="margin:.5rem 0">Full setlist featuring all your favorite tracks plus exclusive live arrangements.</p>
+        </div>
+        <div class="cardx">
+          <div style="font-size:2rem; margin-bottom:8px">✨</div>
+          <h3 style="margin:.3rem 0; font-size:1.1rem">Stage Production</h3>
+          <p class="note" style="margin:.5rem 0">Stunning visuals, lighting, and effects that bring the Movement Era to life.</p>
+        </div>
+        <div class="cardx">
+          <div style="font-size:2rem; margin-bottom:8px">🤝</div>
+          <h3 style="margin:.3rem 0; font-size:1.1rem">Fan Interaction</h3>
+          <p class="note" style="margin:.5rem 0">Special moments, crowd participation, and memories you'll never forget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="footer">
+  <div class="container">
+    <small>
+      © <span data-year></span> Casey R Kane • McB Create • Official site • movement era.
+    </small>
+  </div>
+</section>
+<script>
+  document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+  document.addEventListener('keydown', (e) => {
+    if (e.key && e.key.toLowerCase() === 't' && !e.metaKey && !e.ctrlKey && !e.altKey){
+      document.querySelector('[data-theme-toggle]')?.click();
+    }
+  });
+</script>
+</main>
+
+<script src="assets/notifications.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/tours.js"></script>
+<script src="assets/tour-features.js"></script>
+<script src="assets/back-to-top.js"></script>
+</body>
+</html>
